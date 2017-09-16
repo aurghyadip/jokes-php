@@ -3,9 +3,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="utf-8">
 		<title>Paging Using PHP</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-		<script language="javascript" type="text/javascript" src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+		<script language="javascript" type="text/javascript" src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=be7gjzbnx6dojl5rmym35q5yi5yzorjkrt9mg2zd8wc7yjcr"></script>
 		<script language="javascript" type="text/javascript">
-			tinymce.init({ selector:'textarea' });
+			tinymce.init({
+				selector:'textarea',
+				branding: false,
+				height: 300,
+				themes: "modern"
+			});
 		</script>
 	</head>  
 	
@@ -28,7 +33,7 @@
          			$row=mysqli_fetch_assoc($result);
          		?>
          		<input type="textbox" name="list_id" value=<?php echo $list_id ?> hidden>
-         		<textarea id="elm1" name="elm1" rows="15" cols="80"> <?php echo $row["list_body"]; ?> </textarea>
+         		<textarea name="elm1" rows="30" cols="80"> <?php echo $row["list_body"]; ?> </textarea>
          		<input type="submit" value="Submit">
 			</form>
 		</div>

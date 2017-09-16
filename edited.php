@@ -12,7 +12,6 @@
 	<body>
 		<div class="container">
 				<?php
-					$content = $_POST["elm1"];
 					$list_id = $_POST["list_id"];
 					$servername = "localhost";
          			$username = "root";
@@ -20,6 +19,7 @@
          			$dbname = "jokes";
          			$conn = mysqli_connect($servername, $username, $password,$dbname);
 
+         			$content = mysqli_real_escape_string($conn, $_POST["elm1"]);
          			if(!$conn) {
          				die("Connection Failed".mysqli_connect_error());
          			}
@@ -29,6 +29,7 @@
 					} else {
    						echo "Error updating record: " . mysqli_error($conn);
 					}
+					mysqli_close($conn);
          		?>
 		</div>
 

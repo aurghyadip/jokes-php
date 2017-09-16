@@ -1,7 +1,7 @@
 CREATE TABLE stupidstuff (
     `list_body` longtext CHARACTER SET utf8,
     `list_category` VARCHAR(15) CHARACTER SET utf8,
-    `list_id` INT,
+    `list_id` INT PRIMARY KEY,
     `list_rating` NUMERIC(3, 2)
 );
 INSERT INTO stupidstuff VALUES ('A blackjack dealer and a player with a thirteen count in his hand<br \>were arguing about whether or not it was appropriate to tip the<br \>dealer.<br \><br \>The player said, "When I get bad cards, it''s not the dealer''s fault.<br \>Accordingly, when I get good cards, the dealer obviously had nothing<br \>to do with it so, why should I tip him?"<br \><br \>The dealer said, "When you eat out do you tip the waiter?"<br \><br \>"Yes."<br \><br \>"Well then, he serves you food, I''m serving you cards, so you should<br \>tip me."<br \><br \>"Okay, but, the waiter gives me what I ask for. I''ll take an eight."','Children',1,2.63);
